@@ -6,6 +6,11 @@
 
 #import <Foundation/Foundation.h>
 
+#define UIViewAutoresizeHW          (UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth)
+#define UIViewAutoresizeHoriCenter  (UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin)
+#define UIViewAutoresizeVertCenter  (UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)
+#define UIViewAutoresizeCenter      (UIViewAutoresizeHoriCenter | UIViewAutoresizeVertCenter)
+#define UIViewAutoresizeBottomRight (UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin)
 
 @interface UIView (PCSUtils)
 
