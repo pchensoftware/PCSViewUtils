@@ -30,6 +30,8 @@
 + (float)thinLineWidth;
 + (BOOL)isTallScreen;
 
+- (void)animatePulseToScale:(float)scale duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay;
+
 - (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views;
 - (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views metrics:(NSDictionary *)metrics;
 - (void)addManyVisualConstraints:(NSArray *)formats views:(NSDictionary *)views;

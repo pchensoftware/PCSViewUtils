@@ -132,6 +132,17 @@
    self.origin = CGPointMake(bottomLeft.x, bottomLeft.y - self.height);
 }
 
+- (void)animatePulseToScale:(float)scale duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay {
+   [UIView animateKeyframesWithDuration:duration delay:delay options:0 animations:^{
+      [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:0.5 animations:^{
+         self.transform = CGAffineTransformMakeScale(scale, scale);
+      }];
+      [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+         self.transform = CGAffineTransformIdentity;
+      }];
+   } completion:nil];
+}
+
 - (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views {
    [self addVisualConstraints:format views:views metrics:nil];
 }
