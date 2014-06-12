@@ -29,4 +29,9 @@
 
 + (float)thinLineWidth;
 
+- (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views;
+- (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views metrics:(NSDictionary *)metrics;
+- (void)addManyVisualConstraints:(NSArray *)formats views:(NSDictionary *)views;
+- (void)addManyVisualConstraints:(NSArray *)formats views:(NSDictionary *)views metrics:(NSDictionary *)metrics;
+
 @end

@@ -128,4 +128,21 @@
    self.origin = CGPointMake(bottomLeft.x, bottomLeft.y - self.height);
 }
 
+- (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views {
+   [self addVisualConstraints:format views:views metrics:nil];
+}
+
+- (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views metrics:(NSDictionary *)metrics {
+   [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:format options:0 metrics:metrics views:views]];
+}
+
+- (void)addManyVisualConstraints:(NSArray *)formats views:(NSDictionary *)views {
+   [self addManyVisualConstraints:formats views:views metrics:nil];
+}
+
+- (void)addManyVisualConstraints:(NSArray *)formats views:(NSDictionary *)views metrics:(NSDictionary *)metrics {
+   for (NSString *format in formats)
+      [self addVisualConstraints:format views:views metrics:metrics];
+}
+
 @end
