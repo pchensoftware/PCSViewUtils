@@ -28,6 +28,7 @@
 @property (nonatomic, assign) CGPoint bottomLeft;
 
 + (float)thinLineWidth;
++ (BOOL)isTallScreen;
 
 - (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views;
 - (void)addVisualConstraints:(NSString *)format views:(NSDictionary *)views metrics:(NSDictionary *)metrics;

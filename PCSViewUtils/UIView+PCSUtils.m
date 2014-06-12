@@ -16,6 +16,10 @@
       return 1;
 }
 
++ (BOOL)isTallScreen {
+   return [UIScreen mainScreen].bounds.size.height > 480;
+}
+
 - (CGFloat)x {
    return self.frame.origin.x;
 }
